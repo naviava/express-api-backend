@@ -4,30 +4,31 @@ This repository provides a guide and codebase for creating an Express API backen
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
+1. [Getting Started](#1-getting-started)
 
    - [1.2 Create tsconfig.json](#12-create-tsconfigjson)
    - [1.3 Create nodemon.json](#13-create-nodemonjson)
    - [1.4 Create src/index.ts](#14-create-srcindexts)
    - [1.5 Update package.json](#15-update-packagejson)
 
-2. [Setting up Prisma with PostgreSQL](#setting-up-prisma-with-postgresql)
+2. [Setting up Prisma with PostgreSQL](#2-setting-up-prisma-with-postgresql)
 
    - [2.1 Install Prisma and Docker](#21-install-prisma-and-docker)
    - [2.2 Configure Docker with docker-compose.yml](#22-configure-docker-with-docker-composeyml)
-   - [2.3 Configure Prisma](#23-configure-prisma)
-   - [2.4 Define Prisma Schema](#24-define-prisma-schema)
-   - [2.5 Run Prisma Migrations](#25-run-prisma-migrations)
-   - [2.6 Additional Dependencies](#26-additional-dependencies)
+   - [2.3 Run PostgreSQL docker container](#23-run-postgresql-docker-container)
+   - [2.4 Configure Prisma](#24-configure-prisma)
+   - [2.5 Define Prisma Schema](#25-define-prisma-schema)
+   - [2.6 Run Prisma Migrations](#26-run-prisma-migrations)
+   - [2.7 Additional Dependencies](#27-additional-dependencies)
 
-3. [User Authentication](#user-authentication)
+3. [User Authentication](#3-user-authentication)
 
    - [3.1 Install bcrypt and Create Helpers](#31-install-bcrypt-and-create-helpers)
    - [3.2 Create Auth Controllers](#32-create-auth-controllers)
    - [3.3 Create Auth Routes](#33-create-auth-routes)
    - [3.4 Middleware for Authentication](#34-middleware-for-authentication)
 
-4. [User Management](#user-management)
+4. [User Management](#4-user-management)
    - [4.1 Create Users Controller](#41-create-users-controller)
    - [4.2 Create Users Router](#42-create-users-router)
    - [4.3 Secure Routes with Middleware](#43-secure-routes-with-middleware)
@@ -140,6 +141,8 @@ npx prisma init
 ```
 
 ### 2.5 Define Prisma Schema
+
+prisma/schema.prisma
 
 ```prisma
 generator client {
